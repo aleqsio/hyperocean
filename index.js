@@ -1,6 +1,7 @@
 'use strict';
 const foregroundColor = '#8F93A2';
-const backgroundColor = '#0F111A';
+const backgroundColor = '#000';
+const backgroundActiveColor = '#090909';
 const selectionColor = 'rgba(58, 117, 196, 0.3)';
 const black = '#000000';
 const red = '#E25822';
@@ -63,11 +64,11 @@ exports.decorateConfig = config => {
         transition: all 140ms ease;
       }
       .tab_tab:not(.tab_active) {
-        background: ${darkBlue};
+        background: ${backgroundActiveColor};
         color: ${lightBlack};
       }
       .tab_tab:not(.tab_active):hover {
-        background: ${lightBlue};
+        background: ${backgroundActiveColor};
         color: ${foregroundColor};
         transition: background 140ms ease;
       }
@@ -80,7 +81,7 @@ exports.decorateConfig = config => {
         height: 7px;
       }
       .splitpane_divider {
-        background-color: ${darkBlue} !important;
+        background-color: ${backgroundActiveColor} !important;
       }
       `
   });
